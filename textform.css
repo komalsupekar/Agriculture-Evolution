@@ -1,0 +1,16 @@
+.form 
+{
+
+    position: centre;
+    z-index: 1;
+  /*  background: rgba(7,40,195,0.8);*/
+    /*background:rgb(105, 109, 160);*/
+    max-width: 500px;
+    margin: 0 auto 100px;
+    margin-left: 300px;
+    padding: 45px;
+    text-align: center;
+    font-family: 'Lora',serif;
+    font-size: large;
+
+}

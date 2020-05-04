@@ -1,0 +1,67 @@
+html {
+  background: url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  	overflow-y: scroll;
+}
+
+.login-page{
+    width: 360px;
+    padding: 10% 0 0 ;
+    margin: auto;
+}
+
+.form{
+    position: relative;
+    z-index: 1;
+  /*  background: rgba(7,40,195,0.8);*/
+    background:rgb(105, 109, 160);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+.form input{
+    font-family: "Roboto",sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button
+{
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form button:hover,.form button:active{
+    background: #43A047;
+
+}
+.form .message{
+    margin: 15px 0 0;
+    color: aliceblue;
+    font-size: 12px;
+}
+
+.form .message a{
+    color: #43a050;
+    text-decoration: none;
+}
+.form .register-form{
+    display: none;
+}

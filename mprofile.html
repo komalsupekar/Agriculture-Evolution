@@ -1,0 +1,170 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AGREECULTURE</title>
+
+      <!-- Font awesome-->
+      <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity crossorigin="anonymous">
+
+
+      <!--google font styling-->
+      <link href="http://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+  </head>
+
+<!--head part complete-->
+<style>
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;stylesheet
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+header
+{
+    background: #dee8f1;
+    height: 66px;
+
+}
+header *
+{
+    color: #392837;
+
+}
+header .logo{
+    float: center;
+    height: inherit;
+    margin-top: 8px;
+    margin-left: 550px;
+    border: 1px ;
+}
+header .logo-text
+{
+    margin: 9px;
+    font-family: 'Candel',serif;
+}
+header .logo-text span
+{
+    color:#f091e4;
+}
+
+body
+{
+  background-color: #a2ddd0;
+}
+
+h1
+{
+  color:#0a6755;
+   font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 2px 2px #cb98c0;
+}
+</style>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>Agree</span>Culture</h1>
+      </div>
+  </header>
+  </br></br>
+  <center>
+    <h1>AGREECULTURE EVOLUTION</h1>
+</br></br>
+
+<div class="card-list">
+  <div class="card 1" onclick="window.location.href='home.html'">
+    <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+    <div class="card_title title-white">
+      <p> About</p>
+    </div>
+  </div>
+
+
+  <div class="card 2" onclick="window.location.href='msubmission.html'">
+  <div class="card_image">
+    <img src="file:///home/komal/Downloads/flower/aggd.jpg" />
+    </div>
+  <div class="card_title title-white">
+    <p >Group Discussion</p>
+  </div>
+</div>
+
+<div class="card 3" onclick="window.location.href='maddpost.html'">
+  <div class="card_image">
+    <img src="file:///home/komal/Downloads/flower/4825100-it-is-a-green-new-rice-land-background-.jpg" />
+  </div>
+  <div class="card_title">
+    <p>ADD Product</p>
+  </div>
+</div>
+
+<div class="card 4" onclick="window.location.href='logout.html'">
+<div class="card_image">
+  <img src="data:image/png;base64,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" />
+  </div>
+<div class="card_title title-black">
+  <p>LOG OUT</p>
+</div>
+</div>
+
+</div>
+</body>
+
+
+</html>

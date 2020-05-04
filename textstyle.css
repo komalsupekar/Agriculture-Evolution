@@ -1,0 +1,117 @@
+body{
+    padding: 7% 0 0;
+   
+    margin: auto;
+    font-style: italic;
+    font-size: medium;
+    padding: 0px;
+    margin: 0px;
+    background: #f6f6f6;
+    font-family: 'Lora',serif;
+
+
+}
+
+.form 
+{
+
+    position: centre;
+    z-index: 1;
+  /*  background: rgba(7,40,195,0.8);*/
+    /*background:rgb(105, 109, 160);*/
+    max-width: 500px;
+    margin: 0 auto 100px;
+    margin-left: 300px;
+    padding: 45px;
+    text-align: center;
+    font-family: 'Candel',serif;
+    font-size: large;
+
+}
+.form .title
+{
+    
+}
+header
+{
+    background: #008489;
+    height: 66px;
+
+}
+header *
+{
+    color: white;
+
+} 
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2cm;
+    border: 1px ;
+}
+header .logo-text
+{
+    margin: 9px;
+    font-family: 'Candel',serif;
+}
+header .logo-text span
+{
+    color:navy;
+}
+header ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border: 1px ;
+
+}
+
+header ul li{
+    float: left;
+    position: relative;
+}
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display:none;
+    
+}
+header ul li:hover ul{
+    display: block;
+}
+header ul li ul li{
+   width: 100%; 
+ 
+}
+header ul li ul li a {
+    padding: 10px;
+    background : white;
+    color: #444;    
+}
+header ul li ul li a:hover{
+    background: #bad4d4;
+    
+}
+header ul li ul li  a.logout
+{
+    color: red;
+}
+
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration:none;
+}
+header ul li a:hover{
+background: #006669;
+transition: 0.5s;
+
+}
+header .menu-toggle
+{
+    display: none;
+}

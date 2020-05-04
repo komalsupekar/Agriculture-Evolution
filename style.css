@@ -1,0 +1,205 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: #f6f6f6;
+    background-image: url(indexbg.jpeg);
+    font-family: 'Lora',serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Candel',serif;
+    color: #444;
+
+}
+header
+{
+    background: #008489;
+    height: 66px;
+
+}
+header *
+{
+    color: white;
+
+}
+header .logo{
+    float: center;
+    height: inherit;
+    margin-top: 3px;
+    margin-left: 500px;
+    border: 1px ;
+}
+header .logo-text
+{
+    margin: 9px;
+    font-family: 'Candel',serif;
+}
+header .logo-text span
+{
+    color:navy;
+}
+header ul{
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border: 1px ;
+
+}
+
+header ul li{
+    float: left;
+    position: relative;
+}
+header ul li ul{
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display:none;
+
+}
+header ul li:hover ul{
+    display: block;
+}
+header ul li ul li{
+   width: 100%;
+
+}
+header ul li ul li a {
+    padding: 10px;
+    background : white;
+    color: #444;
+}
+header ul li ul li a:hover{
+    background: #bad4d4;
+
+}
+header ul li ul li  a.logout
+{
+    color: red;
+}
+
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration:none;
+}
+header ul li a:hover{
+background: #006669;
+transition: 0.5s;
+
+}
+header .menu-toggle
+{
+    display: none;
+}
+/* Post slider*/
+.post-slider {
+    position: relative;
+    border: 1px solid red;
+
+}
+.post-slider .slider-title {
+        text-align: center;
+        margin: 30px auto;
+}
+.post-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: #006699;
+    cursor: pointer;
+}
+.post-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #006699;
+    cursor: pointer;
+}
+.post-slider .post-wrapper {
+    width: 84%;
+    height: 310px;
+    margin: 0px auto;
+    overflow: hidden;
+    border: 1px dashed red;
+
+}
+.post-slider .post-wrapper .post {
+    height: 350px;
+    width: 300px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: #05f7ff;
+
+}
+
+/* media quries*/
+@media only screen and(max-width: 750px)
+{
+    header
+    {
+        position: relative;
+    }
+    header ul {
+            width: 100px;
+            background: #0E94A0 ;
+            max-width: 0px;
+            overflow: hidden;
+    }
+    .showing{
+        max-height: 100em;
+    }
+    header ul li{
+        width: 100%;
+
+    }
+    header ul li ul{
+        width: 100%;
+        position: static;
+
+        display:block;
+
+    }
+    header ul li ul li a {
+        padding: 10px;
+        background : #0E94A0;
+        color:white;
+        padding-left: 50px;
+    }
+    header ul li ul li  a.logout
+{
+    color: red;
+}
+header .menu-toggle
+{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top:10px;
+    font-size: 1.5em;
+    border: 1px ;
+}
+header .logo{
+    margin-left: 0.8em
+
+}
+header .logo-text
+{
+    font-size: .9em;
+
+}
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+html{
+  background-size: cover;
+  background:url("file:///home/komal/Downloads/flower/4825100-it-is-a-green-new-rice-land-background-.jpg")no-repeat center center fixed;
+  overflow-y: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+header{
+  background: aqua;
+}
+
+header *
+{
+    color: #392837;
+
+}
+header .logo{
+    float: center;
+    height: inherit;
+    margin-top: 8px;
+    margin-left: 550px;
+    border: 1px ;
+}
+header .logo-text
+{
+    margin: 9px;
+    font-family: 'Candel',serif;
+}
+header .logo-text span
+{
+    color:#f091e4;
+}
+input[type=text],
+input[type=textarea]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+    .button1 {
+      background-color: #cee3b9;
+      color: black;
+      border: 2px solid #4CAF50;
+    }
+    .button2 {
+      background-color: #ee7888;
+      color: black;
+      border: 2px solid #e21a35;
+    }
+    button {
+        background-color: #34c5f0;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 8px;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    .button1:hover {
+      background-color: #a5d957;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      opacity: 0.8
+    }
+
+    .button2:hover {
+      background-color: #e83b09;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      opacity: 0.8
+    }
+    .container {
+      padding: 16px;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+        h3
+        {
+          color:#0a6755;
+           font-family: Impact, Charcoal, sans-serif;
+            text-shadow: 2px 2px #cb98c0;
+        }
+</style>
+
+<body>
+
+
+    <center>
+    </br></br></br></br></br></br></br></br></br></br>
+      <h3>GET READY TO Login!!!</h3>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create Post</button>
+    </center>
+          <div id="id01" class="modal">
+
+          <form class="modal-content animate" action="/action_page.php">
+              <div class="container">
+                  <label><b>Name</b></label>
+                  <input type="text" placeholder="Enter Name" name="title" id="title" required>
+                  <label><b>Contact</b></label>
+                  <input type="text" placeholder="Enter contact detail" name="content"  id="description" required>
+                  <label><b>Adress</b></label>
+                  <input type="text" placeholder="Enter a Adress" name="comment" id="commnet" required>
+                  <label><b>Crop</b></label>
+                  <input type="text" placeholder="Enter a name of the crop" name="crop" id="crop" required>
+                  <label><b>Period</b></label>
+                  <input type="text" placeholder="Enter a Duration on which crop available" name="period" id="period" required>
+
+                  <button type="submit" onclick="addblog()" class="button1">Login</button>
+
+              </div>
+
+              <div class="container" style="background-color:#f1f1f1">
+                  <button class="button2" class="button button1" onclick="window.location.href='mprofile.html'">Cancel</button>
+              </div>
+          </form>
+      </div>
+
+      <script>
+          var modal = document.getElementById('id01');
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+      </script>
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCLnSjjLlFYHdlv1vkx6NylTOG1nvZgEPs",
+          authDomain: "website-e0558.firebaseapp.com",
+          databaseURL: "https://website-e0558.firebaseio.com",
+          projectId: "website-e0558",
+          storageBucket: "website-e0558.appspot.com",
+          messagingSenderId: "678104848311",
+          appId: "1:678104848311:web:edd5a3e52218c61e7c7a32",
+          measurementId: "G-DTE304JDH9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+
+        function addblog()
+        {
+         var title1,description1,comment1;
+               title1=document.getElementById("title").value;
+               description1=document.getElementById("description").value;
+               comment1=document.getElementById("comment").value;
+         if (firebase.auth().currentUser != null)
+                  {
+                      var v1=firebase.auth().currentUser.uid;
+                          alert(firebase.auth().currentUser.uid);
+
+                             // alert("This is msg");
+                              alert("this is uid"+v1);
+                            //  var newPostKey = firebase.database().ref().child('posts').push().key;
+                              var ref=firebase.database().ref().child(v1).child("blog").push();
+                                  ref.set({
+                                        title:title1,
+                                                  description:description1,
+                                                  comment:comment1
+                                          });
+                  }
+              }
+
+      </script>
+            <script src="/__/firebase/7.13.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+
+      <!-- Initialize Firebase -->
+      <script src="/__/firebase/init.js"></script>
+  </body>
+
+  </html>
