@@ -1,0 +1,130 @@
+<html>
+<style>
+html {
+  background: url("file:///home/komal/Downloads/flower/mandi.jpg")
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  	overflow-y: scroll;
+}
+</style>
+    <head>
+    <title>
+    Login and Registration page
+    </title>
+    <link rel="stylesheet" href="mstylelogin.css">
+   <!--link rel="stylesheet" href="headerstyle.css"-->
+    </head>
+
+    <body>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase.js"></script>
+
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLnSjjLlFYHdlv1vkx6NylTOG1nvZgEPs",
+        authDomain: "website-e0558.firebaseapp.com",
+        databaseURL: "https://website-e0558.firebaseio.com",
+        projectId: "website-e0558",
+        storageBucket: "website-e0558.appspot.com",
+        messagingSenderId: "678104848311",
+        appId: "1:678104848311:web:edd5a3e52218c61e7c7a32",
+        measurementId: "G-DTE304JDH9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+        <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+            <input type="text" placeholder="username" id="username_reg"/>
+            <input type="password" placeholder="password"  id="pass_reg"/>
+            <input type="text" placeholder="email id" id="email_reg"/>
+
+            <button onclick="writeData()">Create </button>
+            <script type="text/javascript" src="loginjs.js"></script>
+            <p class="message">Already Registered ?<a href="#">Login</a> </p>
+            </form>
+
+            <form class="login-form">
+                <input type="text" placeholder="email" id="email_login"/>
+                <input type="password" placeholder="password" id="pass_login"/>
+                <button onclick="reg()">login</button>
+                <p class="message">Not Registered ?<a href="#"> Register</a></p>
+            </form>
+        </div>
+        </div>
+
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height:"toggle", opacity:"toggle"},"slow")
+            });
+        </script>
+    <!-- Javascrpt-->
+        <script>
+            var username_reg,password_reg,email_reg;
+
+
+            function writeData()
+            {
+                username_reg=document.getElementById("username_reg").value;
+                password_reg=document.getElementById("pass_reg").value;
+                email_reg=document.getElementById("email_reg").value;
+                firebase.auth().createUserWithEmailAndPassword(email_reg, password_reg).catch(function(error) {
+                      // Handle Errors here.
+                      var errorCode = error.code;
+                      var errorMessage = error.message;
+                      alert(errorMessage);
+                    });
+                    alert(uid);
+
+                         /*   firebase.auth().onAuthStateChanged(user=>   {
+                                if(uid){
+                                 var refe= firebase.database().ref().child(uid).
+                                    refe.set({
+                                        Username:username_reg,
+                                        Password:password_reg,
+                                        Email:email_reg
+                                    });
+                                 //   alert(user.uid+" User Registered!");
+                                }
+                                else{
+                                    alert("User is not Registered");
+                                }
+                            });*/
+            }
+
+            function reg()
+            {
+                password_login=document.getElementById("pass_login").value;
+                email_login=document.getElementById("email_login").value;
+                firebase.auth().signInWithEmailAndPassword(email_login,password_login);
+                var uid;
+                var refe;
+               firebase.auth().onAuthStateChanged(user=>	{
+                    if(user){
+                        alert(user.uid);
+                        window.location.href="mprofile.html"
+                    }
+                    else{
+                        alert("User is not logged in");
+                    }
+                });
+            }
+        </script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.13.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.13.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    </body>
+    </html>

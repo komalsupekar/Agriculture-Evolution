@@ -1,0 +1,27 @@
+.layout
+{
+
+  /*  background: rgba(7,40,195,0.8);*/
+   /* /*background:rgb(105, 109, 160);*/
+   /* max-width: 500px;*/
+
+   border: 2px solid black;
+  background-color: #86bae7;
+  background: url("https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-size: 1000px  500px;
+  background-repeat: no-repeat;
+
+  font-size: 18px;
+  letter-spacing: .1px;
+  font-weight: 400;
+  padding: 20%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+    font-family: 'Lora',serif;
+    font-size: large;
+    width: 50%
+    height: 100%
+}/*
+body{
+    font-family: Open Sans,sans-serif;
+}*/
